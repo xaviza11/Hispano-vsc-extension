@@ -1,0 +1,13 @@
+{
+    "iconDefinitions": {
+        "hisIcon": {
+            "iconPath": "./icons/his-icon.png"
+        }
+    },
+    "fileExtensions": {
+        "his": "hisIcon"
+    },
+    "languageIds": {
+        "his": "hisIcon"
+    }
+}

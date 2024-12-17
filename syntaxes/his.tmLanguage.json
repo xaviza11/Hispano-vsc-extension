@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "hispano-rust",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#numbers" },
+    { "include": "#functions" },
+    { "include": "#structures" },
+    { "include": "#variables" },
+    { "include": "#operators" },
+    { "include": "#brackets" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.his",
+          "match": "\\b(como|romper|const|continuar|sino|enumerar|externo|funcion|cuando|si|implementar|en|var|siempre|coincide|modulo|mover|mut|pub|retornar|Elmismo|elmismo|estatico|estructura|superior|rasgo|tipo|inseguro|usar|donde|mientras|abstracto|asincrono|caja|cualquiera|mod|e8|e32|e64|e16|f64|f32|f8|f15|in32|in64|in16|in8|caracter|cadena|Cadena|boolcfg|incluir|afirmo|afirmo_igual|afirmo_no)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.his",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.his",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.his",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.his",
+      "match": "\\b(verdadero|falso|booleano|\\d+(\\.\\d+)?)\\b"
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "keyword.control.function.his",
+          "match": "\\bfuncion\\b"
+        },
+        {
+          "name": "entity.name.function.his",
+          "match": "\\bfuncion\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
+        },
+        {
+          "name": "entity.name.function.call.his",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+        }
+      ]
+    },
+    "structures": {
+      "patterns": [
+        {
+          "name": "keyword.control.structure.his",
+          "match": "\\b(estructura|implementar)\\b"
+        },
+        {
+          "name": "entity.name.type.his",
+          "match": "\\b([A-Z][a-zA-Z0-9_]*)\\s*(?=\\{)"
+        }
+      ]
+    },
+    "variables": {
+      "name": "variable.other.his",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?!\\s*\\()"
+    },
+    "operators": {
+      "name": "keyword.operator.his",
+      "match": "[+\\-*/=<>!&|%^~]+"
+    },
+    "brackets": {
+      "name": "punctuation.bracket.his",
+      "match": "[(){}\\[\\]]"
+    }
+  },
+  "scopeName": "source.his"
+}

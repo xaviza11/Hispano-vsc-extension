@@ -1,0 +1,34 @@
+{
+  "name": "hispano-extension",
+  "publisher": "xavier-zamora-lorente",
+  "displayName": "hispano-rust",
+  "description": "Programa rust en español",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.95.3"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "his",
+      "aliases": ["hispano-rust", "his"],
+      "extensions": [".his"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "his",
+      "scopeName": "source.his",
+      "path": "./syntaxes/his.tmLanguage.json"
+    }],
+    "iconThemes": [
+      {
+          "id": "his-file-icons",
+          "label": "Hispano-Rust File Icons",
+          "path": "./file-icons.json"
+      }
+  ]
+  },
+  "icon": "./icons/his-icon.png"
+}
